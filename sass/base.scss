@@ -1,13 +1,77 @@
 @import "compass/reset";
+@import "mixins";
 
 $primary-font-family: 'Droid Sans', sans-serif;
 $secondary-font-family: 'Raleway', sans-serif;
 $base-font: 16px;
 $base-line-height: 1.4;
 
-
-/**
- * TYPE
- */
-h1 {
+%headings {
+    color: #666;
+    font-family: $secondary-font-family;
+    font-weight: 100;
+    line-height: $base-line-height;
 }
+
+h1 {
+    @extend %headings;
+    font-size: 48px;
+}
+
+h2 {
+    @extend %headings;
+    font-size: 36px;
+}
+
+h3 {
+    @extend %headings;
+    font-size: 24px;
+}
+
+p {
+    color: #999;
+    font-family: $primary-font-family;
+    font-size: 14px;
+    line-height: 1.54;
+    margin-bottom: 15px;
+}
+
+#container {
+    width: 960px;
+
+    header {
+        padding-bottom: 35px;
+        margin-left: 10px;
+    }
+
+    section {
+        display: inline-block;
+        text-align: top;
+        width: 710px;
+        margin-left: 10px;
+
+        @include respond-to('mobile') {
+            width: 150px;
+            background-color: blue;
+        }
+    }
+
+    aside {
+        display: inline-block;
+        width: 220px;
+    }
+}
+
+@for $i from 1 through 3 {
+    #loop-directive .house-#{$i} {
+        @include border-radius(multiply-by-10($i) + 10px);
+
+        background-color: #DDD + multiply-by-10($i);
+        height: 40px + multiply-by-10($i);
+    }
+}
+
+
+
+
+ 

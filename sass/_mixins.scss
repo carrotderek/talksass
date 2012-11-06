@@ -1,0 +1,19 @@
+@function multiply-by-10($num) {
+    @return $num * 10;
+}
+
+@mixin border-radius($radius:10px) {
+    webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin respond-to($media) {
+    @if ($media == 'mobile') {
+        @media only screen and (max-width:480px) {
+            @content
+        }
+    }
+}
+
+
+
