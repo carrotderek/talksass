@@ -6,6 +6,7 @@ This repo contains the results of the live-coding session to introduce features 
 - `sass/base.scss`  - port of `bad.css` to sass
 
 A bash script was written to handle Sass/Compass/Ruby [installation](https://gist.github.com/3694114) 
+
 **Usage**
     ./setup-sass.sh [-h|--help] [--with-rvm]
 
@@ -14,17 +15,17 @@ Here's a rundown of what was discussed:
 Compass
 -------
 A command line utlity which includes helpful modules (e.g. CSS3 helpers)
+
 The configuration file `config.rb` allows you to set input/output directories, minified/expanded output etc.
 
-`compass compile` - Compile all sass files
-`compass watch ` - Set observer to compile sass files upon saving
+- `compass compile` - Compile all sass files
+- `compass watch ` - Set observer to compile sass files upon saving
 
 Sass
 -------
 Sass is a CSS Preprocess which extends CSS by adding programmatical syntax.
 
 Variables - look like `$variable: something;`
-Nesting
 
 **Modules**
 `@import 'module-name'` - allow importing of helper modules
