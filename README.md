@@ -77,7 +77,6 @@ Function and mixin support. Use functions purely for value manipulation (e.g. yo
         @return ($target / $context) * 1em;
     }
 
-
     @mixin opacity($opacity) {
         filter: alpha(opacity=#{$opacity});
         opacity: $opacity * 0.01;                      
@@ -88,7 +87,7 @@ They are used differently:
     .transparent-pane {
         font-size: px-to-em(14px);
 
-        @include opacity(0.9);
+        @include opacity(90);
     }
 
 There is also a ruby-like construct equivalent to `yield` that allows us to pass content blocks into mixins. Makes it easy for responsive css
